@@ -1,5 +1,5 @@
-import React from "react";
-import Playlist from "./Playlist";
+ import React from "react";
+import Playlist from "./PlaylistItem";
 
 class ContentModule extends React.Component {
   state = {
@@ -26,6 +26,6 @@ class ContentModule extends React.Component {
       </React.Fragment>
     );
   }
-}
+} 
 
 export default ContentModule;

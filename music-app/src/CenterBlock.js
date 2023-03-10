@@ -1,7 +1,7 @@
 import SearchModule from "./SearchModule";
 import FilterModule from "./FilterModule";
 import TitleModule from "./TitleModule";
-import ContentModule from "./ContentModule";
+import Playlist from "./Playlist";
 
 function CenterBlock() {
   return (
@@ -9,7 +9,7 @@ function CenterBlock() {
       <SearchModule />
       <FilterModule />
       <TitleModule />
-      <ContentModule />
+      <Playlist />
     </div>
   );
 }
