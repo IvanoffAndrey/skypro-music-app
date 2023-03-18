@@ -1,3 +1,4 @@
+import * as S from "./styles/FilterModuleStyles";
 import Filter from "./Filter";
 import React from "react";
 const { useState } = React;
@@ -91,42 +92,34 @@ function FilterModule() {
   };
 
   return (
-    <div className="centerblock__filter filter">
-      <div className="filter__title">Искать по:</div>
-      <div
-        className={ filterAuthor ? "filter__button button-author _btn-text filter__button_active" : "filter__button button-author _btn-text"} 
-        onClick={toggleVisibilityAuthor}
-      >
+    <S.CenterblockFilter>
+      <S.FilterTitle>Искать по:</S.FilterTitle>
+      <S.FilterButton props={filterAuthor} onClick={toggleVisibilityAuthor}>
         исполнителю
-      </div>
-      <div
-        className={ filterYear ? "filter__button button-year _btn-text filter__button_active" : "filter__button button-year _btn-text" }
-        onClick={toggleVisibilityYear}
-      >
+      </S.FilterButton>
+      <S.FilterButton props={filterYear} onClick={toggleVisibilityYear}>
         году выпуска
-      </div>
-      <div
-        className={ filterGenre ? "filter__button button-genre _btn-text filter__button_active" : "filter__button button-genre _btn-text" }
-        onClick={toggleVisibilityGenre}
-      >
+      </S.FilterButton>
+      <S.FilterButton props={filterGenre} onClick={toggleVisibilityGenre}>
         жанру
-      </div>
+      </S.FilterButton>
+
       {visibleFilterAuthor && (
-        <div className="filter__menu filter__menu_authors">
+        <S.FilterMenuAuthors>
           <Filter data={authors} />
-        </div>
+        </S.FilterMenuAuthors>
       )}
       {visibleFilterYear && (
-        <div className="filter__menu filter__menu_years">
+        <S.FilterMenuYears>
           <Filter data={years} />
-        </div>
+        </S.FilterMenuYears>
       )}
       {visibleFilterGenre && (
-        <div className="filter__menu filter__menu_genres">
+        <S.FilterMenuGenres>
           <Filter data={genres} />
-        </div>
+        </S.FilterMenuGenres>
       )}
-    </div>
+    </S.CenterblockFilter>
   );
 }
 

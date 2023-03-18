@@ -1,5 +1,6 @@
-import iconNote from "./img/icon/note.svg";
-import btnLike from "./img/icon/like.svg";
+import * as S from "./styles/PlaylistStyles";
+import iconNote from "./assets/img/icon/note.svg";
+import btnLike from "./assets/img/icon/like.svg";
 import React from "react";
 const { useEffect, useState } = React;
 
@@ -13,371 +14,318 @@ function Playlist() {
   });
 
   return (
-    <div className="content__playlist playlist">
+    <S.PlaylistContent>
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  Guilt <span className="track__title-span"></span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              Reality
-              <a className="track__author-link" href="http://">
-                Nero
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
+                  Guilt <S.TrackTitleSpan></S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">Nero</S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">
                 Welcome Reality
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">4:44</span>
-            </div>
-          </div>
-        </div>
+              </S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>4:44</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  Elektro <span className="track__title-span"></span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
+                  Elektro <S.TrackTitleSpan></S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">
                 Dynoro, Outwork, Mr. Gee
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                Elektro
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">2:22</span>
-            </div>
-          </div>
-        </div>
+              </S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">Elektro</S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>2:22</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  I’m Fire <span className="track__title-span"></span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                Ali Bakgor
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                I’m Fire
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">2:22</span>
-            </div>
-          </div>
-        </div>
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
+                  I’m Fire <S.TrackTitleSpan></S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">Ali Bakgor</S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">I’m Fire</S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>2:22</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  Non Stop <span className="track__title-span">(Remix)</span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
+                  Non Stop <S.TrackTitleSpan>(Remix)</S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">
                 Стоункат, Psychopath
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                Non Stop
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">4:12</span>
-            </div>
-          </div>
-        </div>
+              </S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">Non Stop</S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>4:12</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  Run Run{" "}
-                  <span className="track__title-span">(feat. AR/CO)</span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
+                  Run Run <S.TrackTitleSpan>(feat. AR/CO)</S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">
                 Jaded, Will Clarke, AR/CO
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                Run Run
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">2:54</span>
-            </div>
-          </div>
-        </div>
+              </S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">Run Run</S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>2:54</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
                   Eyes on Fire{" "}
-                  <span className="track__title-span">(Zeds Dead Remix)</span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
+                  <S.TrackTitleSpan>(Zeds Dead Remix)</S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">
                 Blue Foundation, Zeds Dead
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                Eyes on Fire
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">5:20</span>
-            </div>
-          </div>
-        </div>
+              </S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">Eyes on Fire</S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>5:20</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
                   Mucho Bien{" "}
-                  <span className="track__title-span">(Hi Profile Remix)</span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
+                  <S.TrackTitleSpan>(Hi Profile Remix)</S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">
                 HYBIT, Mr. Black, Offer Nissim, Hi Profile
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                Mucho Bien
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">3:41</span>
-            </div>
-          </div>
-        </div>
+              </S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">Mucho Bien</S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>3:41</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  Knives n Cherries <span className="track__title-span"></span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                minthaze
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                Captivating
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">1:48</span>
-            </div>
-          </div>
-        </div>
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
+                  Knives n Cherries
+                  <S.TrackTitleSpan></S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">minthaze</S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">Captivating</S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>1:48</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  How Deep Is Your Love{" "}
-                  <span className="track__title-span"></span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                Calvin Harris, Disciples
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                How Deep Is Your Love
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">3:32</span>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
-      ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  Morena <span className="track__title-span"></span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                Tom Boxer
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
+                  Morena
+                  <S.TrackTitleSpan></S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">Tom Boxer</S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">
                 Soundz Made in Romania
-              </a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text">3:36</span>
-            </div>
-          </div>
-        </div>
+              </S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>1:48</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
 
       {skeleton ? (
-        <div className="skeleton__playlist-item"></div>
+        <S.SkeletonPlaylistItem></S.SkeletonPlaylistItem>
       ) : (
-        <div className="playlist__item">
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <img className="track__title-svg" src={iconNote} alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <span className="track__title-span"></span>
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://"></a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://"></a>
-            </div>
-            <div className="track__time">
-              <img className="track__time-svg" src={btnLike} alt="like" />
-              <span className="track__time-text"></span>
-            </div>
-          </div>
-        </div>
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
+            <S.TrackTitle>
+              <S.TrackTitleImg>
+                <S.TrackTitleSvg src={iconNote} alt="music" />
+              </S.TrackTitleImg>
+              <S.TrackTitleText>
+                <S.TrackTitleLink href="http://">
+                  Morena
+                  <S.TrackTitleSpan></S.TrackTitleSpan>
+                </S.TrackTitleLink>
+              </S.TrackTitleText>
+            </S.TrackTitle>
+            <S.TrackAuthor>
+              <S.TrackAuthorLink href="http://">Tom Boxer</S.TrackAuthorLink>
+            </S.TrackAuthor>
+            <S.TrackAlbum>
+              <S.TrackAlbumLink href="http://">
+                Soundz Made in Romania
+              </S.TrackAlbumLink>
+            </S.TrackAlbum>
+            <S.TrackTime>
+              <S.TrackTimeImg src={btnLike} alt="like" />
+              <S.TrackTimeText>1:48</S.TrackTimeText>
+            </S.TrackTime>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
       )}
-    </div>
+    </S.PlaylistContent>
   );
 }
 
