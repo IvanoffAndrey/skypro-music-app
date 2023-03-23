@@ -1,3 +1,4 @@
+import * as S from "./styles/SidebarItemStyles";
 import React from "react";
 const { useEffect, useState } = React;
 
@@ -11,11 +12,11 @@ function SidebarItem(props) {
   });
 
   return (
-    <div className="sidebar__item">
-      <a className="sidebar__link" href="#">
-        { skeleton ? <div className="skeleton__sidebar-img"></div> : <img className="sidebar__img" src={ props.src } alt="day's playlist" /> }
-      </a>
-    </div>
+    <S.SidebarItem>
+      <S.SidebarLink href="#">
+        { skeleton ? <S.SidebarSkeletonImg></S.SidebarSkeletonImg> : <S.SidebarImg src={ props.src } alt="day's playlist" /> }
+      </S.SidebarLink>
+    </S.SidebarItem>
   );
 }
 

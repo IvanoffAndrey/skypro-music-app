@@ -1,11 +1,12 @@
 import React from "react";
+import * as S from "./styles/FilterStyles";
 
 function Filter(props) {
   const filterTemplate = props.data.map(function (item) {
     return (
-      <div className="filter__menu-item" key={item.id}>
+      <S.FilerItem key={item.id}>
         {item.text}
-      </div>
+      </S.FilerItem>
     );
   });
 
