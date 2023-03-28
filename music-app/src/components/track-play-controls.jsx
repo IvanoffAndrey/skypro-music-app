@@ -1,5 +1,5 @@
-import iconNote from "./assets/img/icon/note.svg";
-import * as S from "./styles/TrackPlayControlsStyles";
+import iconNote from "../assets/img/icon/note.svg";
+import * as S from "../styles/TrackPlayControlsStyles";
 
 function TrackPlayControls() {
   return (

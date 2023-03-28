@@ -1,5 +1,5 @@
-import iconWatch from "./assets/img/icon/watch.svg";
-import * as S from "./styles/TitleModuleStyles";
+import iconWatch from "../assets/img/icon/watch.svg";
+import * as S from "../styles/TitleModuleStyles";
 
 function TitleModule() {
   return (

@@ -1,6 +1,6 @@
-import btnLike from "./assets/img/icon/like.svg";
-import btnDislike from "./assets/img/icon/dislike.svg";
-import * as S from "./styles/LikeDislikeControlsStyles";
+import btnLike from "../assets/img/icon/like.svg";
+import btnDislike from "../assets/img/icon/dislike.svg";
+import * as S from "../styles/LikeDislikeControlsStyles";
 
 function LikeDislikeControls() {
   return (

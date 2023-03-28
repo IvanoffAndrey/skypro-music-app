@@ -1,4 +1,5 @@
-import * as S from "./styles/MenuStyles";
+import * as S from "../styles/MenuStyles";
+import { Link } from "react-router-dom";
 
 function Menu(props) {
   const visible = props.visible;
@@ -7,7 +8,7 @@ function Menu(props) {
       <S.MenuNav>
         <S.MenuList>
           <S.MenuItem>
-            <S.MenuLink href="http://">Главное</S.MenuLink>
+            <Link to="/"><S.MenuLink>Главное</S.MenuLink></Link>
           </S.MenuItem>
           <S.MenuItem>
             <S.MenuLink href="http://">Мой плейлист</S.MenuLink>

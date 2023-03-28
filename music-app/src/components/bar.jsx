@@ -1,9 +1,9 @@
-import PlayerProgress from "./PlayerProgress";
-import PlayerControls from "./PlayerControls";
-import TrackPlayControls from "./TrackPlayControls";
-import LikeDislikeControls from "./LikeDislikeControls";
-import VolumeControls from "./VolumeControls";
-import * as S from "./styles/BarBlockStyles";
+import PlayerProgress from "./player-progress";
+import PlayerControls from "./player-controls";
+import TrackPlayControls from "./track-play-controls";
+import LikeDislikeControls from "./like-dislike-controls";
+import VolumeControls from "./volume-controls";
+import * as S from "../styles/BarBlockStyles";
 
 function BarBlock() {
   return (

@@ -1,9 +1,9 @@
-import btnPrev from "./assets/img/icon/prev.svg";
-import btnPlay from "./assets/img/icon/play.svg";
-import btnNext from "./assets/img/icon/next.svg";
-import btnRepeat from "./assets/img/icon/repeat.svg";
-import btnShuffle from "./assets/img/icon/shuffle.svg";
-import * as S from "./styles/PlayerControlsStyles";
+import btnPrev from "../assets/img/icon/prev.svg";
+import btnPlay from "../assets/img/icon/play.svg";
+import btnNext from "../assets/img/icon/next.svg";
+import btnRepeat from "../assets/img/icon/repeat.svg";
+import btnShuffle from "../assets/img/icon/shuffle.svg";
+import * as S from "../styles/PlayerControlsStyles";
 
 function PlayerControls() {
   return (

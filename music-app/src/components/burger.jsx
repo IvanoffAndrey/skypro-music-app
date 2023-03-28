@@ -1,6 +1,6 @@
-import Menu from "./Menu";
+import Menu from "./nav-menu";
 import React from "react";
-import * as S from "./styles/BurgerStyles";
+import * as S from "../styles/BurgerStyles";
 const { useState } = React;
 
 function Burger() {
