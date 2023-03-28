@@ -19,15 +19,14 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route
-        path="/"
         element={
-          <ProtectedRoute isAllowed={getCookie("token") !== undefined}>
-            <Main />
-          </ProtectedRoute>
+          <ProtectedRoute isAllowed={getCookie("token") !== undefined} />
         }
-      />
+      >
+        <Route path="/" element={<Main />} />
+        <Route path="/playlist/:id" element={<Playlist />} />
+      </Route>
       <Route path="/login" element={<Login />} />
-      <Route path="/playlist/:id" element={<Playlist />} />
     </Routes>
   );
 };
