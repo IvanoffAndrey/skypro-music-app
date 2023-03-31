@@ -1,5 +1,5 @@
-import * as S from "./styles/FilterModuleStyles";
-import Filter from "./Filter";
+import * as S from "../styles/FilterModuleStyles";
+import Filter from "./filter";
 import React from "react";
 const { useState } = React;
 

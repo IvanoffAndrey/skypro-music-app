@@ -1,5 +1,5 @@
-import iconVolume from "./assets/img/icon/volume.svg";
-import * as S from "./styles/VolumeControlsStyles";
+import iconVolume from "../assets/img/icon/volume.svg";
+import * as S from "../styles/VolumeControlsStyles";
 
 function VolumeControls() {
   return (

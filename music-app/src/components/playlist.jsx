@@ -1,6 +1,6 @@
-import * as S from "./styles/PlaylistStyles";
-import iconNote from "./assets/img/icon/note.svg";
-import btnLike from "./assets/img/icon/like.svg";
+import * as S from "../styles/PlaylistStyles";
+import iconNote from "../assets/img/icon/note.svg";
+import btnLike from "../assets/img/icon/like.svg";
 import React from "react";
 const { useEffect, useState } = React;
 
