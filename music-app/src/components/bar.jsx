@@ -4,15 +4,37 @@ import TrackPlayControls from "./track-play-controls";
 import LikeDislikeControls from "./like-dislike-controls";
 import VolumeControls from "./volume-controls";
 import * as S from "../styles/BarBlockStyles";
+import React from "react";
+const { useState } = React;
 
 function BarBlock() {
+  const [prog, setProg] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [time, setTime] = useState(0);
+
+  const style = {
+    backgroundColor: "#B672FF",
+    width: prog,
+    height: "100%",
+    zIndex: "1",
+  };
+
+  const updateProg = (valueProg, valueDuration) => {
+    setProg(valueProg + "%");
+    setDuration(valueDuration);
+  };
+
+  const updateTime = (value) => {
+    setTime(value);
+  }
+
   return (
     <S.Bar>
       <S.BarContent>
-        <PlayerProgress />
+        <PlayerProgress style={style} duration={duration} updateTime={updateTime} />
         <S.BarPlayerBlock>
           <S.BarPlayer>
-            <PlayerControls />
+            <PlayerControls updateProg={updateProg} newTime={time} />
           </S.BarPlayer>
           <TrackPlayControls />
           <LikeDislikeControls />

@@ -13,13 +13,13 @@ function SidebarItem(props) {
 
   return (
     <S.SidebarItem>
-      <S.SidebarLink href="#">
+      
         {skeleton ? (
           <S.SidebarSkeletonImg></S.SidebarSkeletonImg>
         ) : (
           <S.SidebarImg src={props.src} alt="day's playlist" />
         )}
-      </S.SidebarLink>
+      
     </S.SidebarItem>
   );
 }

@@ -9,11 +9,6 @@ const SidebarItem = styled.div`
   }
 `;
 
-const SidebarLink = styled.a`
-  width: 100%;
-  height: 100%;
-`;
-
 const SidebarImg = styled.img`
   width: 100%;
   height: auto;
@@ -25,4 +20,4 @@ const SidebarSkeletonImg = styled.div`
   background: #313131;
 `;
 
-export { SidebarItem, SidebarLink, SidebarImg, SidebarSkeletonImg };
+export { SidebarItem, SidebarImg, SidebarSkeletonImg };
