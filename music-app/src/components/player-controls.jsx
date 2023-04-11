@@ -19,9 +19,7 @@ function PlayerControls(props) {
 
   const handleProgress = () => {
     setProgress(
-      //Math.ceil(
         (playerRef.current.currentTime * 100) / playerRef.current.duration
-      //)
     );
     props.updateProg(progress, playerRef.current.duration);
   };
