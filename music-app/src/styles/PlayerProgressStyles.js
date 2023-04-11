@@ -4,6 +4,9 @@ const PlayerProgress = styled.div`
   width: 100%;
   height: 5px;
   background: #2e2e2e;
+  :hover {
+    height: 8px;
+  }
 `;
 
 export { PlayerProgress };

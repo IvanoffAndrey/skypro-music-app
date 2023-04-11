@@ -37,7 +37,6 @@ const PlayerBtnPlay = styled(PlayerButton)`
 const PlayerImgPlay = styled.img`
   width: 22px;
   height: 20px;
-  fill: #d9d9d9;
 `;
 
 const PlayerBtnNext = styled(PlayerButton)`
@@ -48,8 +47,6 @@ const PlayerBtnNext = styled(PlayerButton)`
 const PlayerImgNext = styled.img`
   width: 15px;
   height: 14px;
-  fill: inherit;
-  stroke: #d9d9d9;
 `;
 
 const PlayerBtnRepeat = styled(PlayerButton)`
@@ -72,6 +69,10 @@ const PlayerImgShuffle = styled.img`
   stroke: #696969;
 `;
 
+const Player = styled.audio`
+  display: none;
+`;
+
 export {
   PlayerControls,
   PlayerBtnPrev,
@@ -84,4 +85,5 @@ export {
   PlayerImgRepeat,
   PlayerBtnShuffle,
   PlayerImgShuffle,
+  Player,
 };

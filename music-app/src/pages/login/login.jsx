@@ -28,12 +28,13 @@ export function Login() {
         <S.LoginInput placeholder="Пароль" />
         {visible && <S.LoginInput placeholder="Повторите пароль" />}
         {!visible && (
-          <Link to="/">
-            <S.LoginButton>Войти</S.LoginButton>
-          </Link>
-        )}
-        {!visible && (
-          <S.RegButton onClick={registration}>Зарегистрироваться</S.RegButton>
+          <React.Fragment>
+            <Link to="/">
+              <S.LoginButton>Войти</S.LoginButton>
+            </Link>
+
+            <S.RegButton onClick={registration}>Зарегистрироваться</S.RegButton>
+          </React.Fragment>
         )}
         {visible && (
           <S.LoginButton onClick={registration}>
