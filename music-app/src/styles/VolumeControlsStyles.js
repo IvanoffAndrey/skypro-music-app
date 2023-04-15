@@ -46,7 +46,6 @@ const VolumeImgContainer = styled.div`
 const VolumeImg = styled.img`
   width: 13px;
   height: 18px;
-  fill: transparent;
 `;
 
 export { VolumeControls, VolumeContent, VolumeProgress, VolumeProgressLine, VolumeImgContainer, VolumeImg };

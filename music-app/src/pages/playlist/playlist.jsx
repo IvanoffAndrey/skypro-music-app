@@ -5,6 +5,8 @@ import Personal from "../../components/personal";
 import * as Sidebar from "../../styles/SidebarBlockStyles";
 import CenterBlock from "../../components/centerblock";
 import { useParams } from "react-router-dom";
+import { ThemeContext, themes } from "../../contexts/theme";
+import { useState } from "react";
 
 const PLAYLISTS = [
   {
@@ -22,22 +24,36 @@ const PLAYLISTS = [
 ];
 
 export function Playlist() {
+  const [currentTheme, setCurrentTheme] = useState(themes.dark);
+
+  const toggleTheme = () => {
+    if (currentTheme === themes.dark) {
+      setCurrentTheme(themes.light);
+      return;
+    }
+
+    setCurrentTheme(themes.dark);
+  };
+
   const params = useParams();
   const playlist = PLAYLISTS.find(
     (playlist) => playlist.id === Number(params.id)
   );
+
   return (
-    <S.Wrapper>
-      <S.Container>
-        <S.Main>
-          <NavBlock />
-          <CenterBlock title={playlist.title} />
-          <Sidebar.SidebarBlock>
-            <Personal />
-          </Sidebar.SidebarBlock>
-        </S.Main>
-        <BarBlock />
-      </S.Container>
-    </S.Wrapper>
+    <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
+      <S.Wrapper>
+        <S.Container>
+          <S.Main>
+            <NavBlock />
+            <CenterBlock title={playlist.title} />
+            <Sidebar.SidebarBlock style={currentTheme === themes.dark ? {background:'#181818'} : {background: '#f5f5f5'}}>
+              <Personal />
+            </Sidebar.SidebarBlock>
+          </S.Main>
+          <BarBlock />
+        </S.Container>
+      </S.Wrapper>
+    </ThemeContext.Provider>
   );
 }

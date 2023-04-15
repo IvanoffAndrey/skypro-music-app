@@ -1,6 +1,7 @@
 import * as S from "../styles/FilterModuleStyles";
 import Filter from "./filter";
 import React from "react";
+import { useThemeContext } from "../contexts/theme";
 const { useState } = React;
 
 const authors = [
@@ -91,16 +92,20 @@ function FilterModule() {
     setFilterYear(false);
   };
 
+  const { theme } = useThemeContext();
+
+
   return (
+    
     <S.CenterblockFilter>
-      <S.FilterTitle>Искать по:</S.FilterTitle>
-      <S.FilterButton props={filterAuthor} onClick={toggleVisibilityAuthor}>
+      <S.FilterTitle style={{ color: theme.color }}>Искать по:</S.FilterTitle>
+      <S.FilterButton props={filterAuthor} onClick={toggleVisibilityAuthor} style={{ color: theme.color, border: theme.filterButtonBorder }}>
         исполнителю
       </S.FilterButton>
-      <S.FilterButton props={filterYear} onClick={toggleVisibilityYear}>
+      <S.FilterButton props={filterYear} onClick={toggleVisibilityYear} style={{ color: theme.color, border: theme.filterButtonBorder }}>
         году выпуска
       </S.FilterButton>
-      <S.FilterButton props={filterGenre} onClick={toggleVisibilityGenre}>
+      <S.FilterButton props={filterGenre} onClick={toggleVisibilityGenre} style={{ color: theme.color, border: theme.filterButtonBorder }}>
         жанру
       </S.FilterButton>
 

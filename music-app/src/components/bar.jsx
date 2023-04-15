@@ -5,12 +5,14 @@ import LikeDislikeControls from "./like-dislike-controls";
 import VolumeControls from "./volume-controls";
 import * as S from "../styles/BarBlockStyles";
 import React from "react";
+import { useThemeContext } from "../contexts/theme";
 const { useState } = React;
 
 function BarBlock() {
   const [prog, setProg] = useState(0);
   const [duration, setDuration] = useState(0);
   const [time, setTime] = useState(0);
+  const { theme } = useThemeContext();
 
   const style = {
     backgroundColor: "#B672FF",
@@ -29,7 +31,7 @@ function BarBlock() {
   }
 
   return (
-    <S.Bar>
+    <S.Bar style={{ background: theme.barBackground }}>
       <S.BarContent>
         <PlayerProgress style={style} duration={duration} updateTime={updateTime} />
         <S.BarPlayerBlock>
