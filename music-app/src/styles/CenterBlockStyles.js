@@ -6,6 +6,7 @@ const CenterBlock = styled.div`
   -ms-flex-positive: 3;
   flex-grow: 3;
   padding: 20px 40px 20px 111px;
+  background: ${((props) => props.backgroundColor)};
 `;
 
 const CenterBlockH2 = styled.h2`
@@ -15,6 +16,7 @@ const CenterBlockH2 = styled.h2`
   line-height: 72px;
   letter-spacing: -0.8px;
   margin-bottom: 45px;
+  color: ${((props) => props.textColor)};
 `;
 
 const CenterBlockContent = styled.div`

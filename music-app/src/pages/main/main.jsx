@@ -3,33 +3,22 @@ import NavBlock from "../../components/nav";
 import SidebarBlock from "../../components/sidebar";
 import BarBlock from "../../components/bar";
 import CenterBlock from "../../components/centerblock";
-import { ThemeContext, themes } from "../../contexts/theme";
-import { useState } from "react";
+import ThemeProvider from "../../contexts/ThemeProvider";
 
 export function Main() {
-  const [currentTheme, setCurrentTheme] = useState(themes.dark);
-
-  const toggleTheme = () => {
-    if (currentTheme === themes.dark) {
-      setCurrentTheme(themes.light);
-      return;
-    }
-
-    setCurrentTheme(themes.dark);
-  };
 
   return (
-    <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
+    <ThemeProvider>
       <S.Wrapper>
         <S.Container>
           <S.Main>
             <NavBlock />
             <CenterBlock title={"Треки"} />
-            <SidebarBlock />
+            <SidebarBlock menuVisible={true}/>
           </S.Main>
           <BarBlock />
         </S.Container>
       </S.Wrapper>
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 }

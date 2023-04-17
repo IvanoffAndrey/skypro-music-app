@@ -1,10 +1,11 @@
 import iconSearchDark from "../assets/img/icon/search-dark.svg";
 import iconSearchLight from "../assets/img/icon/search-light.svg";
 import * as S from "../styles/SearchModuleStyles";
-import { useThemeContext } from "../contexts/theme";
+import React, { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 function SearchModule() {
-  const { theme } = useThemeContext();
+  const { theme } = useContext(ThemeContext);
 
   return (
     <S.SearchModule>
@@ -13,7 +14,7 @@ function SearchModule() {
         type="search"
         placeholder="Поиск"
         name="search"
-        style={{ color: theme.color }}
+        placeholderColor = { theme.color }
       ></S.SearchModuleText>
     </S.SearchModule>
   );

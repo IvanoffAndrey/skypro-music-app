@@ -9,12 +9,12 @@ import btnNextLight from "../assets/img/icon/next-light.svg";
 import btnRepeat from "../assets/img/icon/repeat.svg";
 import btnShuffle from "../assets/img/icon/shuffle.svg";
 import * as S from "../styles/PlayerControlsStyles";
-import React from "react";
-import { useThemeContext } from "../contexts/theme";
+import React, { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 const { useRef, useState, useEffect } = React;
 
 function PlayerControls(props) {
-  const { theme } = useThemeContext();
+  const { theme } = useContext(ThemeContext);
   let btnPlay = theme.button === "light" ? btnPlayLight : btnPlayDark;
   let btnPause = theme.button === "light" ? btnPauseLight : btnPauseDark;
   const playerRef = useRef(null);

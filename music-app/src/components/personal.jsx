@@ -1,12 +1,13 @@
 import * as S from "../styles/PersonalStyles";
-import { useThemeContext } from "../contexts/theme";
+import React, { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 function Personal() {
-  const { theme } = useThemeContext();
+  const { theme } = useContext(ThemeContext);
 
   return (
     <S.Personal>
-      <S.PersonalName style={{ color: theme.color }}>Andrey.Ivanov</S.PersonalName>
+      <S.PersonalName textColor={ theme.color }>Andrey.Ivanov</S.PersonalName>
       <S.PersonalAvatar></S.PersonalAvatar>
     </S.Personal>
   );

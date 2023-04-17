@@ -1,10 +1,10 @@
 import * as S from "../styles/PlayerProgressStyles";
-import React from "react";
-import { useThemeContext } from "../contexts/theme";
+import React, { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 const { useRef } = React;
 
 function PlayerProgress(props) {
-  const { theme } = useThemeContext();
+  const { theme } = useContext(ThemeContext);
   const positionRef = useRef(null);
 
   const handlePosition = (e) => {
@@ -17,7 +17,7 @@ function PlayerProgress(props) {
     <S.PlayerProgress
       onClick={handlePosition}
       ref={positionRef}
-      style={{ background: theme.playerProgressColor }}
+      backgroundColor={ theme.playerProgressColor }
     >
       <div style={props.style}></div>
     </S.PlayerProgress>

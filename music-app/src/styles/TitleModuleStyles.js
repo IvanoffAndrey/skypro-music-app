@@ -29,18 +29,22 @@ const TitleCol = styled.div`
 
 const Col01 = styled(TitleCol)`
   width: 447px;
+  color: ${((props) => props.textColor)};
 `;
 
 const Col02 = styled(TitleCol)`
   width: 321px;
+  color: ${((props) => props.textColor)};
 `;
 
 const Col03 = styled(TitleCol)`
   width: 245px;
+  color: ${((props) => props.textColor)};
 `;
 
 const Col04 = styled(TitleCol)`
   width: 60px;
+  color: ${((props) => props.textColor)};
   text-align: end;
 `;
 

@@ -1,15 +1,16 @@
 import Personal from "./personal";
 import SidebarMenu from "./sidebar-menu";
 import * as S from "../styles/SidebarBlockStyles";
-import { useThemeContext } from "../contexts/theme";
+import React, { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
-function SidebarBlock() {
-  const { theme } = useThemeContext();
+function SidebarBlock(props) {
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <S.SidebarBlock style={{ background: theme.sidebarblockBackground }}>
+    <S.SidebarBlock backgroundColor={ theme.sidebarblockBackground }>
       <Personal />
-      <SidebarMenu />
+      { props.menuVisible && <SidebarMenu />}
     </S.SidebarBlock>
   );
 }

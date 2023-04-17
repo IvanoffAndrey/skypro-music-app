@@ -17,7 +17,7 @@ function VolumeControls() {
       </S.VolumeContent>
       <S.VolumeProgress>
         <S.VolumeProgressLine
-          style={{ color: theme.volumeColor }}
+          volumeColor = { theme.volumeColor }
           type="range"
           name="range"
         />

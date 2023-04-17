@@ -36,6 +36,7 @@ const VolumeProgress = styled.div`
 const VolumeProgressLine = styled.input`
   width: 109px;
   cursor: pointer;
+  background: ${(props) => props.volumeColor};
 `;
 
 const VolumeImgContainer = styled.div`
@@ -48,4 +49,11 @@ const VolumeImg = styled.img`
   height: 18px;
 `;
 
-export { VolumeControls, VolumeContent, VolumeProgress, VolumeProgressLine, VolumeImgContainer, VolumeImg };
+export {
+  VolumeControls,
+  VolumeContent,
+  VolumeProgress,
+  VolumeProgressLine,
+  VolumeImgContainer,
+  VolumeImg,
+};

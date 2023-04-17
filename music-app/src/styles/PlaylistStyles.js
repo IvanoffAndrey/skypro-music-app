@@ -58,7 +58,7 @@ const TrackTitleImg = styled.div`
   width: 51px;
   height: 51px;
   padding: 16px;
-  background: #313131;
+  background: ${((props) => props.backgroundColor)};
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +85,7 @@ const TrackTitleLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: ${((props) => props.textColor)};
 `;
 
 const TrackTitleSpan = styled.span`
@@ -93,7 +93,7 @@ const TrackTitleSpan = styled.span`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #4e4e4e;
+  color: ${((props) => props.textColor)};
 `;
 
 const TrackAuthor = styled.div`
@@ -111,7 +111,7 @@ const TrackAuthorLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: ${((props) => props.textColor)};
   text-align: left;
 `;
 
@@ -124,7 +124,7 @@ const TrackAlbumLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #696969;
+  color: ${((props) => props.textColor)};
 `;
 
 const TrackTime = styled.div``;
@@ -143,7 +143,7 @@ const TrackTimeText = styled.span`
   font-size: 16px;
   line-height: 24px;
   text-align: right;
-  color: #696969;
+  color: ${((props) => props.textColor)};
 `;
 
 export {

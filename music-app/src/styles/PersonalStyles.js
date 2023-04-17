@@ -22,7 +22,7 @@ const PersonalName = styled.p`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: ${((props) => props.textColor)};
   margin-right: 16px;
 `;
 
