@@ -3,12 +3,16 @@ import FilterModule from "./filter-module";
 import TitleModule from "./title";
 import Playlist from "./playlist";
 import * as S from "../styles/CenterBlockStyles";
+import React, { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 function CenterBlock(props) {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <S.CenterBlock>
+    <S.CenterBlock backgroundColor={ theme.centerblockBackground }>
       <SearchModule />
-      <S.CenterBlockH2>{props.title}</S.CenterBlockH2>
+      <S.CenterBlockH2 textColor={ theme.color }>{props.title}</S.CenterBlockH2>
       <FilterModule />
       <S.CenterBlockContent>
         <TitleModule />

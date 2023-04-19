@@ -33,7 +33,7 @@ const TrackPlayAuthorLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: ${((props) => props.textColor)};
   white-space: nowrap;
 `;
 
@@ -48,13 +48,13 @@ const TrackPlayAlbumLink = styled.a`
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  color: #ffffff;
+  color: ${((props) => props.textColor)};
 `;
 
 const TrackPlayItem = styled.div`
   width: 51px;
   height: 51px;
-  background-color: #313131;
+  background: ${((props) => props.backgroundColor)};
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

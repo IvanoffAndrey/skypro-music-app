@@ -15,7 +15,7 @@ const MenuItem = styled.li`
 `;
 
 const MenuLink = styled.a`
-  color: #ffffff;
+  color: ${((props) => props.textColor)};
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;

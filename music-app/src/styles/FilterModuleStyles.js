@@ -24,12 +24,12 @@ const FilterTitle = styled.div`
 `;
 
 const FilterButton = styled.div`
-  color: ${(props) => (props.active ? "#b672ff" : "#ffffff")};
+  color: ${(props) => (props.active ? "#b672ff" : props.textColor)};
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  border: 1px solid #ffffff;
+  border: ${(props) => ("1px solid" + (props.active ? "#b672ff" : props.borderColor))};
   border-radius: 60px;
   padding: 6px 20px;
   &:hover {

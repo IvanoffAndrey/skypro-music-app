@@ -66,7 +66,7 @@ const SearchModuleText = styled.input`
 
   &::placeholder {
     background-color: transparent;
-    color: #ffffff;
+    color: ${(props) => props.placeholderColor || '#ffffff'};
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

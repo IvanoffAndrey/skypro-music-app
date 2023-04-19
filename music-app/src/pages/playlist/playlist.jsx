@@ -1,10 +1,11 @@
 import * as S from "../../styles/AppStyles";
 import NavBlock from "../../components/nav";
 import BarBlock from "../../components/bar";
-import Personal from "../../components/personal";
-import * as Sidebar from "../../styles/SidebarBlockStyles";
+import SidebarBlock from "../../components/sidebar";
 import CenterBlock from "../../components/centerblock";
 import { useParams } from "react-router-dom";
+import ThemeProvider from "../../contexts/ThemeProvider";
+import { useState } from "react";
 
 const PLAYLISTS = [
   {
@@ -27,17 +28,17 @@ export function Playlist() {
     (playlist) => playlist.id === Number(params.id)
   );
   return (
-    <S.Wrapper>
-      <S.Container>
-        <S.Main>
-          <NavBlock />
-          <CenterBlock title={playlist.title} />
-          <Sidebar.SidebarBlock>
-            <Personal />
-          </Sidebar.SidebarBlock>
-        </S.Main>
-        <BarBlock />
-      </S.Container>
-    </S.Wrapper>
+    <ThemeProvider>
+      <S.Wrapper>
+        <S.Container>
+          <S.Main>
+            <NavBlock />
+            <CenterBlock title={playlist.title} />
+            <SidebarBlock menuVisible={false}/>
+          </S.Main>
+          <BarBlock />
+        </S.Container>
+      </S.Wrapper>
+    </ThemeProvider>
   );
 }
