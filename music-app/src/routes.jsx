@@ -4,23 +4,13 @@ import { Login } from "./pages/login/login";
 import { Playlist } from "./pages/playlist/playlist";
 import { ProtectedRoute } from "./components/protected-route";
 
-export const AppRoutes = () => {
-  const getCookie = (name) => {
-    let matches = document.cookie.match(
-      new RegExp(
-        "(?:^|; )" +
-          name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
-          "=([^;]*)"
-      )
-    );
-    return matches ? decodeURIComponent(matches[1]) : undefined;
-  };
+export const AppRoutes = ({ user }) => {
 
   return (
     <Routes>
       <Route
         element={
-          <ProtectedRoute isAllowed={getCookie("token") !== undefined} />
+          <ProtectedRoute isAllowed={Boolean(user)} />
         }
       >
         <Route path="/" element={<Main />} />
