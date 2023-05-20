@@ -2,18 +2,21 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const api = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://painassasin.online/user/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://painassasin.online/" }),
   endpoints: (build) => ({
+    getTracks: build.query({
+      query: () => "catalog/track/all/",
+    }),
     regUser: build.mutation({
       query: (body) => ({
-        url: "signup/",
+        url: "user/signup/",
         method: "POST",
         body,
       }),
     }),
     logUser: build.mutation({
       query: (body) => ({
-        url: "login/",
+        url: "user/login/",
         method: "POST",
         body,
       }),
@@ -21,4 +24,4 @@ export const api = createApi({
   }),
 });
 
-export const { useRegUserMutation, useLogUserMutation } = api;
+export const { useGetTracksQuery, useRegUserMutation, useLogUserMutation } = api;

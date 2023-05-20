@@ -1,10 +1,11 @@
 import * as S from "../../styles/login";
 import logo from "../../assets/img/login-logo.svg";
 import Logo from "../../components/logo";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useRegUserMutation, useLogUserMutation } from "../../redux";
-const { useState, useEffect } = React;
+import { useDispatch } from "react-redux";
+import { setId } from "../../redux/slices/userSlice"
 
 export function Login() {
   const [visible, setVisability] = useState(false);
@@ -13,7 +14,8 @@ export function Login() {
   const [password, setPassword] = useState("");
   //const [user, setUser] = useState(null);
   const [regUser] = useRegUserMutation();
-  const [logUser, { isSuccess, data }] = useLogUserMutation();
+  const [logUser] = useLogUserMutation();
+  const dispatch = useDispatch();
   const openRegWindow = () => {
     setVisability(!visible);
   };
@@ -37,13 +39,13 @@ export function Login() {
       await logUser({
         email: email,
         password: password,
-      }).unwrap();
-      console.log(email, password);
+      })
+        .unwrap()
+        .then((payload) => dispatch(setId(payload.id)));
       setEmail("");
       setPassword("");
     }
   };
-
 
   // if (isError) console.log("Ошибка регистрации");
 
